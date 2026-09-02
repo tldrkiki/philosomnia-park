@@ -451,7 +451,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setActiveTab('tickets')}
-              className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 hover:from-violet-400 hover:via-fuchsia-400 hover:to-cyan-400 text-white font-bold px-5 py-2 rounded-full shadow-lg shadow-violet-500/25 text-sm transition-all duration-300 transform hover:scale-105 flex items-center gap-1.5"
+              className="bg-gradient-to-r from-violet-500 to-blue-500 hover:from-violet-400 hover:to-blue-400 text-white font-bold px-5 py-2 rounded-full shadow-lg shadow-violet-500/25 text-sm transition-all duration-300 transform hover:scale-105 flex items-center gap-1.5"
             >
               <Ticket className="w-4 h-4" />
               購買門票
