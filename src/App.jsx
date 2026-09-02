@@ -355,25 +355,25 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-400 selection:text-slate-900">
+    <div className="min-h-screen bg-[#070B14] text-slate-100 font-sans selection:bg-violet-500/40 selection:text-white">
       
-      {/* 1. DISNEY-STYLE TOP NAVIGATION BAR */}
-      <header className="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-amber-500/20 shadow-xl">
+      {/* 1. TOP NAVIGATION BAR — Night-dream redesign */}
+      <header className="sticky top-0 z-40 bg-[#0A0F1C]/90 backdrop-blur-xl border-b border-violet-500/20 shadow-[0_4px_30px_rgba(139,92,246,0.08)]">
         {/* Top utility bar */}
-        <div className="bg-slate-950 px-4 py-1.5 text-xs text-slate-400 border-b border-slate-800 flex justify-between items-center max-w-7xl mx-mx-auto">
+        <div className="bg-[#050810] px-4 py-1.5 text-xs text-slate-400 border-b border-violet-900/30 flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center space-x-4">
-            <span className="flex items-center gap-1 text-amber-400">
+            <span className="flex items-center gap-1.5 text-cyan-300/90">
               <Moon className="w-3.5 h-3.5" /> 樂園開放時間：每日 15:00 - 26:00 (02:00 AM)
             </span>
-            <span className="hidden md:inline text-slate-500">|</span>
-            <span className="hidden md:inline">失眠鎮邏各斯大娛樂家 · 初代反斗俠創立</span>
+            <span className="hidden md:inline text-slate-600">|</span>
+            <span className="hidden md:inline text-slate-500">失眠鎮邏各斯大娛樂家 · 初代反斗俠創立</span>
           </div>
           <div className="flex items-center space-x-4">
-            <button className="hover:text-amber-300 transition flex items-center gap-1">
+            <button className="hover:text-cyan-300 transition flex items-center gap-1.5">
               <User className="w-3.5 h-3.5" /> 登入 / 入境登記
             </button>
-            <span className="text-slate-600">|</span>
-            <span className="text-amber-400 font-medium">繁體中文 (邏各斯語)</span>
+            <span className="text-slate-700">|</span>
+            <span className="text-violet-300/90 font-medium">繁體中文 (邏各斯語)</span>
           </div>
         </div>
 
@@ -384,16 +384,16 @@ export default function App() {
             onClick={() => setActiveTab('home')}
             className="cursor-pointer flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition">
-              <div className="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-amber-400" />
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 via-fuchsia-500 to-cyan-400 p-[2px] shadow-lg shadow-violet-500/30 group-hover:scale-105 transition-transform duration-300">
+              <div className="w-full h-full bg-[#070B14] rounded-full flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-cyan-300" />
               </div>
             </div>
             <div>
-              <div className="text-xl md:text-2xl font-black tracking-wider bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 bg-clip-text text-transparent font-serif">
+              <div className="text-xl md:text-2xl font-black tracking-wider bg-gradient-to-r from-violet-200 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent font-serif">
                 失眠夜遊樂園
               </div>
-              <div className="text-[10px] tracking-widest text-amber-500/80 uppercase font-sans">
+              <div className="text-[10px] tracking-[0.2em] text-violet-400/70 uppercase font-sans">
                 Philosomnia Park
               </div>
             </div>
@@ -403,45 +403,45 @@ export default function App() {
           <nav className="hidden lg:flex items-center space-x-1 font-medium text-sm">
             <button 
               onClick={() => setActiveTab('home')}
-              className={`px-3.5 py-2 rounded-lg transition ${activeTab === 'home' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition ${activeTab === 'home' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
               首頁
             </button>
             <button 
               onClick={() => setActiveTab('map')}
-              className={`px-3.5 py-2 rounded-lg transition flex items-center gap-1.5 ${activeTab === 'map' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 ${activeTab === 'map' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
-              <Compass className="w-4 h-4 text-amber-400" />
+              <Compass className="w-4 h-4 text-cyan-400" />
               樂園地圖
             </button>
             <button 
               onClick={() => { setActiveTab('attractions'); setSelectedCategory('all'); }}
-              className={`px-3.5 py-2 rounded-lg transition ${activeTab === 'attractions' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition ${activeTab === 'attractions' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
               遊樂設施
             </button>
             <button 
               onClick={() => setActiveTab('shows')}
-              className={`px-3.5 py-2 rounded-lg transition ${activeTab === 'shows' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition ${activeTab === 'shows' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
               娛樂表演
             </button>
             <button 
               onClick={() => setActiveTab('hotel')}
-              className={`px-3.5 py-2 rounded-lg transition flex items-center gap-1.5 ${activeTab === 'hotel' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 ${activeTab === 'hotel' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
-              <Hotel className="w-4 h-4 text-amber-400" />
+              <Hotel className="w-4 h-4 text-cyan-400" />
               煙霧溫泉旅館
             </button>
             <button 
               onClick={() => setActiveTab('tickets')}
-              className={`px-3.5 py-2 rounded-lg transition ${activeTab === 'tickets' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition ${activeTab === 'tickets' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
               門票預訂
             </button>
             <button 
               onClick={() => setActiveTab('rules')}
-              className={`px-3.5 py-2 rounded-lg transition ${activeTab === 'rules' ? 'bg-amber-500/20 text-amber-300 font-bold' : 'text-slate-300 hover:text-amber-300 hover:bg-slate-800/60'}`}
+              className={`px-3.5 py-2 rounded-xl transition ${activeTab === 'rules' ? 'bg-violet-500/20 text-violet-200 font-bold' : 'text-slate-400 hover:text-cyan-300 hover:bg-violet-950/40'}`}
             >
               樂園守則
             </button>
@@ -451,7 +451,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setActiveTab('tickets')}
-              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-4 py-2 rounded-full shadow-lg shadow-amber-500/20 text-sm transition transform hover:scale-105 flex items-center gap-1.5"
+              className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 hover:from-violet-400 hover:via-fuchsia-400 hover:to-cyan-400 text-white font-bold px-5 py-2 rounded-full shadow-lg shadow-violet-500/25 text-sm transition-all duration-300 transform hover:scale-105 flex items-center gap-1.5"
             >
               <Ticket className="w-4 h-4" />
               購買門票
@@ -460,13 +460,13 @@ export default function App() {
         </div>
 
         {/* Mobile quick tabs */}
-        <div className="lg:hidden flex overflow-x-auto px-4 py-2 bg-slate-900 border-t border-slate-800 text-xs gap-2 no-scrollbar">
-          <button onClick={() => setActiveTab('home')} className={`px-3 py-1.5 rounded-full whitespace-nowrap ${activeTab === 'home' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-300'}`}>首頁</button>
-          <button onClick={() => setActiveTab('map')} className={`px-3 py-1.5 rounded-full whitespace-nowrap ${activeTab === 'map' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-300'}`}>樂園地圖</button>
-          <button onClick={() => setActiveTab('attractions')} className={`px-3 py-1.5 rounded-full whitespace-nowrap ${activeTab === 'attractions' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-300'}`}>設施</button>
-          <button onClick={() => setActiveTab('shows')} className={`px-3 py-1.5 rounded-full whitespace-nowrap ${activeTab === 'shows' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-300'}`}>表演</button>
-          <button onClick={() => setActiveTab('hotel')} className={`px-3 py-1.5 rounded-full whitespace-nowrap ${activeTab === 'hotel' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-300'}`}>溫泉旅館</button>
-          <button onClick={() => setActiveTab('tickets')} className={`px-3 py-1.5 rounded-full whitespace-nowrap ${activeTab === 'tickets' ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-300'}`}>門票</button>
+        <div className="lg:hidden flex overflow-x-auto px-4 py-2 bg-[#0A0F1C] border-t border-violet-900/20 text-xs gap-2 no-scrollbar">
+          <button onClick={() => setActiveTab('home')} className={`px-3 py-1.5 rounded-full whitespace-nowrap transition ${activeTab === 'home' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'bg-violet-950/50 text-slate-400'}`}>首頁</button>
+          <button onClick={() => setActiveTab('map')} className={`px-3 py-1.5 rounded-full whitespace-nowrap transition ${activeTab === 'map' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'bg-violet-950/50 text-slate-400'}`}>樂園地圖</button>
+          <button onClick={() => setActiveTab('attractions')} className={`px-3 py-1.5 rounded-full whitespace-nowrap transition ${activeTab === 'attractions' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'bg-violet-950/50 text-slate-400'}`}>設施</button>
+          <button onClick={() => setActiveTab('shows')} className={`px-3 py-1.5 rounded-full whitespace-nowrap transition ${activeTab === 'shows' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'bg-violet-950/50 text-slate-400'}`}>表演</button>
+          <button onClick={() => setActiveTab('hotel')} className={`px-3 py-1.5 rounded-full whitespace-nowrap transition ${activeTab === 'hotel' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'bg-violet-950/50 text-slate-400'}`}>溫泉旅館</button>
+          <button onClick={() => setActiveTab('tickets')} className={`px-3 py-1.5 rounded-full whitespace-nowrap transition ${activeTab === 'tickets' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'bg-violet-950/50 text-slate-400'}`}>門票</button>
         </div>
       </header>
 
@@ -476,41 +476,42 @@ export default function App() {
         {/* ==================== HOME PAGE ==================== */}
         {activeTab === 'home' && (
           <div>
-            {/* Hero Banner (Disney style slider frame) */}
-            <div className="relative h-[480px] md:h-[580px] overflow-hidden bg-slate-900">
+            {/* Hero Banner */}
+            <div className="relative h-[480px] md:h-[580px] overflow-hidden bg-[#070B14]">
               <img 
                 src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1920&q=80" 
                 alt="失眠夜樂園城堡" 
-                className="w-full h-full object-cover brightness-75 scale-105 animate-pulse duration-1000"
+                className="w-full h-full object-cover brightness-[0.55] scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-950/40 via-transparent to-cyan-950/30" />
               
               {/* Floating Hero Content */}
               <div className="absolute inset-0 flex items-center justify-center text-center px-4">
                 <div className="max-w-3xl space-y-5">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs md:text-sm font-medium backdrop-blur">
-                    <Sparkles className="w-4 h-4" /> 現實與異世界交織的奇幻國度
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-500/15 border border-violet-400/30 text-violet-200 text-xs md:text-sm font-medium backdrop-blur-md">
+                    <Sparkles className="w-4 h-4 text-cyan-300" /> 現實與異世界交織的奇幻國度
                   </div>
-                  <h1 className="text-3xl md:text-6xl font-black text-white tracking-wide font-serif leading-tight text-shadow-lg">
+                  <h1 className="text-3xl md:text-6xl font-black text-white tracking-wide font-serif leading-tight drop-shadow-lg">
                     失眠夜遊樂園<br />
-                    <span className="text-xl md:text-3xl font-light text-amber-200 mt-2 block font-sans">
+                    <span className="text-xl md:text-3xl font-light text-cyan-200/90 mt-2 block font-sans">
                       「我嘅目標係設計出世界上最偉大嘅遊戲！」
                     </span>
                   </h1>
-                  <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+                  <p className="text-slate-300/90 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
                     初代反斗俠於鎮民大會提出快樂生活方案。邀請你用自己雙腳遊歷異世界，遇見大千世界中探索的朋友，留下難忘回憶！
                   </p>
                   
                   <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
                     <button 
                       onClick={() => setActiveTab('map')}
-                      className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-7 py-3 rounded-full text-base transition shadow-xl shadow-amber-500/30 flex items-center gap-2"
+                      className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-400 hover:to-fuchsia-400 text-white font-bold px-7 py-3 rounded-full text-base transition shadow-xl shadow-violet-500/30 flex items-center gap-2"
                     >
                       <Compass className="w-5 h-5" /> 探索互動地圖
                     </button>
                     <button 
                       onClick={() => setActiveTab('attractions')}
-                      className="bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700 px-7 py-3 rounded-full text-base backdrop-blur transition flex items-center gap-2"
+                      className="bg-white/5 hover:bg-white/10 text-white border border-violet-400/30 px-7 py-3 rounded-full text-base backdrop-blur-md transition flex items-center gap-2"
                     >
                       查看精選設施
                     </button>
@@ -519,20 +520,20 @@ export default function App() {
               </div>
 
               {/* Bottom Quick Bar */}
-              <div className="absolute bottom-0 inset-x-0 bg-slate-950/80 backdrop-blur border-t border-slate-800/80 py-3 px-4 hidden md:block">
+              <div className="absolute bottom-0 inset-x-0 bg-[#070B14]/85 backdrop-blur-md border-t border-violet-500/15 py-3 px-4 hidden md:block">
                 <div className="max-w-7xl mx-auto flex items-center justify-between text-xs text-slate-300">
                   <div className="flex items-center gap-6">
-                    <span className="flex items-center gap-2 text-amber-400 font-bold">
+                    <span className="flex items-center gap-2 text-cyan-300 font-bold">
                       <Clock className="w-4 h-4" /> 今日營業：15:00 - 26:00
                     </span>
                     <span className="flex items-center gap-2">
-                      <Music className="w-4 h-4 text-purple-400" /> 重磅演出：光的泳行 彎曲光影匯演 (26:00)
+                      <Music className="w-4 h-4 text-fuchsia-400" /> 重磅演出：光的泳行 彎曲光影匯演 (26:00)
                     </span>
                     <span className="flex items-center gap-2">
-                      <Bus className="w-4 h-4 text-cyan-400" /> 邏各斯飄飄鐵路 循環線班次每20分開出
+                      <Bus className="w-4 h-4 text-violet-400" /> 邏各斯飄飄鐵路 循環線班次每20分開出
                     </span>
                   </div>
-                  <button onClick={() => setActiveTab('rules')} className="text-amber-400 hover:underline flex items-center gap-1">
+                  <button onClick={() => setActiveTab('rules')} className="text-cyan-300 hover:text-cyan-200 hover:underline flex items-center gap-1">
                     樂園守則與安全須知 <ChevronRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -542,7 +543,7 @@ export default function App() {
             {/* Featured Section Grid */}
             <div className="max-w-7xl mx-auto px-4 py-16 space-y-12">
               <div className="text-center space-y-2">
-                <h2 className="text-2xl md:text-4xl font-bold font-serif text-amber-200">
+                <h2 className="text-2xl md:text-4xl font-bold font-serif bg-gradient-to-r from-violet-200 via-fuchsia-200 to-cyan-200 bg-clip-text text-transparent">
                   失眠夜熱門機動遊戲與體驗
                 </h2>
                 <p className="text-slate-400 text-sm max-w-xl mx-auto">
@@ -555,7 +556,7 @@ export default function App() {
                   <div 
                     key={att.id}
                     onClick={() => setSelectedAttraction(att)}
-                    className="group bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/50 transition cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-amber-500/10 flex flex-col"
+                    className="group bg-[#0C1220] rounded-2xl overflow-hidden border border-violet-500/15 hover:border-cyan-400/40 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-[0_8px_30px_rgba(34,211,238,0.12)] flex flex-col"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img 
@@ -563,24 +564,24 @@ export default function App() {
                         alt={att.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
                       />
-                      <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur px-2.5 py-1 rounded-full text-xs font-medium text-amber-400 border border-amber-500/30">
+                      <div className="absolute top-3 left-3 bg-[#070B14]/85 backdrop-blur px-2.5 py-1 rounded-full text-xs font-medium text-cyan-300 border border-cyan-400/30">
                         {att.zoneName}
                       </div>
                     </div>
                     <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                       <div>
-                        <h3 className="font-bold text-lg text-white group-hover:text-amber-300 transition">
+                        <h3 className="font-bold text-lg text-white group-hover:text-cyan-200 transition">
                           {att.name}
                         </h3>
                         <p className="text-slate-400 text-xs line-clamp-2 mt-1">
                           {att.summary}
                         </p>
                       </div>
-                      <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                      <div className="pt-3 border-t border-violet-900/40 flex items-center justify-between text-xs text-slate-400">
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-amber-400" /> {att.hours}
+                          <Clock className="w-3.5 h-3.5 text-cyan-400" /> {att.hours}
                         </span>
-                        <span className="text-amber-400 font-medium group-hover:translate-x-1 transition flex items-center gap-0.5">
+                        <span className="text-violet-300 font-medium group-hover:translate-x-1 transition flex items-center gap-0.5">
                           查看詳情 <ChevronRight className="w-3.5 h-3.5" />
                         </span>
                       </div>
@@ -590,9 +591,10 @@ export default function App() {
               </div>
 
               {/* Park Highlights Banner */}
-              <div className="bg-gradient-to-r from-purple-900/40 via-slate-900 to-indigo-900/40 border border-purple-500/30 rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="space-y-4 max-w-xl">
-                  <span className="text-xs uppercase tracking-widest text-purple-400 font-bold">
+              <div className="bg-gradient-to-r from-violet-950/50 via-[#0C1220] to-cyan-950/40 border border-violet-500/25 rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-fuchsia-500/10 via-transparent to-transparent pointer-events-none" />
+                <div className="space-y-4 max-w-xl relative z-10">
+                  <span className="text-xs uppercase tracking-widest text-fuchsia-300 font-bold">
                     尊享特別禮遇 · 生日之星
                   </span>
                   <h3 className="text-2xl md:text-3xl font-serif font-bold text-white">
@@ -603,12 +605,12 @@ export default function App() {
                   </p>
                   <button 
                     onClick={() => setActiveTab('tickets')}
-                    className="bg-purple-500 hover:bg-purple-400 text-white font-bold px-6 py-2.5 rounded-full text-sm transition shadow-lg"
+                    className="bg-gradient-to-r from-fuchsia-500 to-violet-500 hover:from-fuchsia-400 hover:to-violet-400 text-white font-bold px-6 py-2.5 rounded-full text-sm transition shadow-lg shadow-fuchsia-500/20"
                   >
                     查看會員與生日禮遇
                   </button>
                 </div>
-                <div className="w-full md:w-80 h-48 rounded-2xl overflow-hidden border border-purple-400/20 shadow-2xl flex-shrink-0">
+                <div className="w-full md:w-80 h-48 rounded-2xl overflow-hidden border border-violet-400/20 shadow-2xl flex-shrink-0 relative z-10">
                   <img 
                     src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80" 
                     alt="星星奶與特權" 
@@ -620,14 +622,14 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== INTERACTIVE MAP PAGE (MATCHING HKDL SCREENSHOTS) ==================== */}
+        {/* ==================== INTERACTIVE MAP PAGE ==================== */}
         {activeTab === 'map' && (
           <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
             {/* Map Header Controls */}
-            <div className="bg-slate-900 p-4 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg">
+            <div className="bg-[#0C1220] p-4 rounded-2xl border border-violet-500/15 flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg">
               <div>
-                <h1 className="text-2xl font-serif font-bold text-amber-200 flex items-center gap-2">
-                  <Compass className="w-6 h-6 text-amber-400" />
+                <h1 className="text-2xl font-serif font-bold text-violet-100 flex items-center gap-2">
+                  <Compass className="w-6 h-6 text-cyan-400" />
                   失眠夜遊樂園 互動地圖
                 </h1>
                 <p className="text-xs text-slate-400 mt-0.5">
@@ -635,18 +637,17 @@ export default function App() {
                 </p>
               </div>
 
-              {/* View Toggle (Matches HKDL Screenshot '列表顯示' button) */}
               <div className="flex items-center gap-3 w-full md:w-auto justify-end">
-                <div className="bg-slate-950 p-1 rounded-xl border border-slate-800 flex items-center">
+                <div className="bg-[#070B14] p-1 rounded-xl border border-violet-900/40 flex items-center">
                   <button 
                     onClick={() => setViewMode('map')}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition flex items-center gap-1.5 ${viewMode === 'map' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition flex items-center gap-1.5 ${viewMode === 'map' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'text-slate-400 hover:text-white'}`}
                   >
                     <Layers className="w-3.5 h-3.5" /> 地圖模式
                   </button>
                   <button 
                     onClick={() => setViewMode('list')}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition flex items-center gap-1.5 ${viewMode === 'list' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition flex items-center gap-1.5 ${viewMode === 'list' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold' : 'text-slate-400 hover:text-white'}`}
                   >
                     <SlidersHorizontal className="w-3.5 h-3.5" /> 列表顯示
                   </button>
@@ -658,31 +659,31 @@ export default function App() {
             <div className="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar text-xs">
               <button 
                 onClick={() => setSelectedCategory('all')}
-                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'all' ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'}`}
+                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'all' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white border-transparent font-bold' : 'bg-[#0C1220] text-slate-300 border-violet-900/40 hover:border-cyan-500/40'}`}
               >
                 全部景點 ({ATTRACTIONS_DATA.length})
               </button>
               <button 
                 onClick={() => setSelectedCategory('rides')}
-                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'rides' ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'}`}
+                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'rides' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white border-transparent font-bold' : 'bg-[#0C1220] text-slate-300 border-violet-900/40 hover:border-cyan-500/40'}`}
               >
                 🎢 機動遊戲
               </button>
               <button 
                 onClick={() => setSelectedCategory('shows')}
-                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'shows' ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'}`}
+                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'shows' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white border-transparent font-bold' : 'bg-[#0C1220] text-slate-300 border-violet-900/40 hover:border-cyan-500/40'}`}
               >
                 🎭 娛樂表演
               </button>
               <button 
                 onClick={() => setSelectedCategory('experiences')}
-                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'experiences' ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'}`}
+                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'experiences' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white border-transparent font-bold' : 'bg-[#0C1220] text-slate-300 border-violet-900/40 hover:border-cyan-500/40'}`}
               >
                 🎪 參觀體驗
               </button>
               <button 
                 onClick={() => setSelectedCategory('dining')}
-                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'dining' ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'}`}
+                className={`px-4 py-2 rounded-full whitespace-nowrap transition border ${selectedCategory === 'dining' ? 'bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white border-transparent font-bold' : 'bg-[#0C1220] text-slate-300 border-violet-900/40 hover:border-cyan-500/40'}`}
               >
                 🍽️ 餐飲商店
               </button>
@@ -690,17 +691,17 @@ export default function App() {
 
             {/* MAP VIEW */}
             {viewMode === 'map' && (
-              <div className="relative w-full h-[520px] md:h-[680px] bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+              <div className="relative w-full h-[520px] md:h-[680px] bg-[#0C1220] rounded-3xl overflow-hidden border border-violet-500/20 shadow-2xl">
                 {/* SVG Theme Map Background */}
                 <svg className="w-full h-full object-cover" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <defs>
                     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#0a1220" />
-                      <stop offset="50%" stopColor="#0f1e36" />
-                      <stop offset="100%" stopColor="#09101d" />
+                      <stop offset="0%" stopColor="#0a0e1a" />
+                      <stop offset="50%" stopColor="#0f1528" />
+                      <stop offset="100%" stopColor="#080c18" />
                     </linearGradient>
                     <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#1e293b" strokeWidth="0.3" />
+                      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#1e1b4b" strokeWidth="0.25" opacity="0.6" />
                     </pattern>
                   </defs>
                   
@@ -708,14 +709,14 @@ export default function App() {
                   <rect width="100" height="100" fill="url(#grid)" />
 
                   {/* Rivers & Water Bodies */}
-                  <path d="M 0,20 Q 25,25 45,15 T 80,10 T 100,25 L 100,0 L 0,0 Z" fill="#0284c7" opacity="0.15" />
-                  <path d="M 10,80 Q 30,60 50,75 T 90,60" fill="none" stroke="#0369a1" strokeWidth="3" opacity="0.3" />
+                  <path d="M 0,20 Q 25,25 45,15 T 80,10 T 100,25 L 100,0 L 0,0 Z" fill="#0e7490" opacity="0.12" />
+                  <path d="M 10,80 Q 30,60 50,75 T 90,60" fill="none" stroke="#06b6d4" strokeWidth="2.5" opacity="0.25" />
 
                   {/* Zone Regions */}
                   {PARK_ZONES.map(z => (
                     <g key={z.id}>
-                      <circle cx={z.pos.x} cy={z.pos.y} r="16" fill="white" opacity="0.03" />
-                      <circle cx={z.pos.x} cy={z.pos.y} r="12" fill="none" stroke="#f59e0b" strokeWidth="0.2" strokeDasharray="1,1" />
+                      <circle cx={z.pos.x} cy={z.pos.y} r="16" fill="white" opacity="0.02" />
+                      <circle cx={z.pos.x} cy={z.pos.y} r="12" fill="none" stroke="#a78bfa" strokeWidth="0.25" strokeDasharray="1,1" opacity="0.7" />
                       <text x={z.pos.x} y={z.pos.y - 12} textAnchor="middle" fill="#94a3b8" fontSize="2.8" fontWeight="bold">
                         {z.name}
                       </text>
@@ -723,7 +724,7 @@ export default function App() {
                   ))}
 
                   {/* Railroad Tracks */}
-                  <path d="M 48,85 Q 15,80 15,40 T 40,20 T 80,35 T 80,75 Z" fill="none" stroke="#f59e0b" strokeWidth="0.6" strokeDasharray="2,2" opacity="0.6" />
+                  <path d="M 48,85 Q 15,80 15,40 T 40,20 T 80,35 T 80,75 Z" fill="none" stroke="#22d3ee" strokeWidth="0.55" strokeDasharray="2,2" opacity="0.45" />
                 </svg>
 
                 {/* Interactive Map Pins */}
@@ -734,15 +735,14 @@ export default function App() {
                     style={{ left: `${att.coords.x}%`, top: `${att.coords.y}%` }}
                     className="absolute -translate-x-1/2 -translate-y-1/2 group cursor-pointer z-10"
                   >
-                    {/* Pin Marker Styled like HKDL Pins */}
                     <div className="relative flex flex-col items-center">
-                      <div className="w-8 h-8 rounded-full bg-slate-900 border-2 border-amber-400 shadow-lg shadow-amber-500/30 flex items-center justify-center transform group-hover:scale-125 transition duration-300">
-                        <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+                      <div className="w-8 h-8 rounded-full bg-[#070B14] border-2 border-cyan-400 shadow-lg shadow-cyan-500/40 flex items-center justify-center transform group-hover:scale-125 transition duration-300">
+                        <Star className="w-4 h-4 text-cyan-300 fill-cyan-400" />
                       </div>
-                      <div className="w-2 h-2 bg-amber-400 rotate-45 -mt-1 shadow-sm" />
+                      <div className="w-2 h-2 bg-cyan-400 rotate-45 -mt-1 shadow-sm" />
                       
                       {/* Name Label Tooltip */}
-                      <div className="opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none absolute bottom-10 bg-slate-950/95 text-amber-200 border border-amber-500/40 text-[11px] font-bold px-2.5 py-1 rounded-md whitespace-nowrap shadow-xl z-20">
+                      <div className="opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none absolute bottom-10 bg-[#070B14]/95 text-cyan-100 border border-cyan-500/40 text-[11px] font-bold px-2.5 py-1 rounded-md whitespace-nowrap shadow-xl z-20">
                         {att.name}
                       </div>
                     </div>
@@ -750,21 +750,21 @@ export default function App() {
                 ))}
 
                 {/* Map Control Helper */}
-                <div className="absolute bottom-4 left-4 bg-slate-950/80 backdrop-blur border border-slate-800 px-3 py-2 rounded-xl text-xs text-slate-300 flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" />
+                <div className="absolute bottom-4 left-4 bg-[#070B14]/85 backdrop-blur border border-violet-500/20 px-3 py-2 rounded-xl text-xs text-slate-300 flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping" />
                   點擊星號 Pin 查看設施詳情及營運狀態
                 </div>
               </div>
             )}
 
-            {/* LIST VIEW (Matches HKDL Screenshot '列表顯示' Layout) */}
+            {/* LIST VIEW */}
             {viewMode === 'list' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredAttractions.map(att => (
                   <div 
                     key={att.id}
                     onClick={() => setSelectedAttraction(att)}
-                    className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/50 transition cursor-pointer shadow-lg hover:shadow-xl p-4 flex gap-4 items-center group"
+                    className="bg-[#0C1220] rounded-2xl overflow-hidden border border-violet-500/15 hover:border-cyan-400/40 transition cursor-pointer shadow-lg hover:shadow-xl p-4 flex gap-4 items-center group"
                   >
                     <img 
                       src={att.image} 
@@ -772,14 +772,14 @@ export default function App() {
                       className="w-24 h-24 rounded-xl object-cover flex-shrink-0 group-hover:scale-105 transition"
                     />
                     <div className="space-y-1.5 flex-1 min-w-0">
-                      <span className="text-[10px] font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+                      <span className="text-[10px] font-bold text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
                         {att.zoneName}
                       </span>
-                      <h3 className="font-bold text-white text-base truncate group-hover:text-amber-300 transition">
+                      <h3 className="font-bold text-white text-base truncate group-hover:text-cyan-200 transition">
                         {att.name}
                       </h3>
                       <p className="text-xs text-slate-400 flex items-center gap-1">
-                        <Clock className="w-3 h-3 text-amber-400" /> {att.hours}
+                        <Clock className="w-3 h-3 text-cyan-400" /> {att.hours}
                       </p>
                       <p className="text-xs text-slate-500 truncate">
                         {att.summary}
@@ -795,9 +795,9 @@ export default function App() {
         {/* ==================== ATTRACTIONS CATALOGUE ==================== */}
         {activeTab === 'attractions' && (
           <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
-            <div className="flex flex-col md:flex-row items-md-center justify-between gap-4 border-b border-slate-800 pb-6">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-violet-900/30 pb-6">
               <div>
-                <h1 className="text-3xl font-serif font-bold text-amber-200">
+                <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-violet-200 to-cyan-200 bg-clip-text text-transparent">
                   失眠夜遊樂設施與主題區域
                 </h1>
                 <p className="text-slate-400 text-sm mt-1">
@@ -813,7 +813,7 @@ export default function App() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="搜尋設施、遊戲或區域..."
-                  className="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#0C1220] border border-violet-900/40 rounded-xl pl-9 pr-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400/60 focus:ring-1 focus:ring-cyan-400/30"
                 />
               </div>
             </div>
@@ -823,23 +823,23 @@ export default function App() {
                 <div 
                   key={att.id}
                   onClick={() => setSelectedAttraction(att)}
-                  className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-amber-500/50 transition cursor-pointer shadow-lg group flex flex-col"
+                  className="bg-[#0C1220] rounded-2xl overflow-hidden border border-violet-500/15 hover:border-cyan-400/40 transition-all duration-300 cursor-pointer shadow-lg group flex flex-col"
                 >
                   <div className="h-48 relative overflow-hidden">
                     <img src={att.image} alt={att.name} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-                    <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur px-2.5 py-1 rounded-full text-xs font-bold text-amber-400 border border-amber-500/30">
+                    <div className="absolute top-3 left-3 bg-[#070B14]/85 backdrop-blur px-2.5 py-1 rounded-full text-xs font-bold text-cyan-300 border border-cyan-400/30">
                       {att.height}
                     </div>
                   </div>
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                     <div>
-                      <div className="text-xs text-amber-500/80 font-medium mb-1">{att.zoneName}</div>
-                      <h3 className="font-bold text-xl text-white group-hover:text-amber-300 transition">{att.name}</h3>
+                      <div className="text-xs text-violet-300/80 font-medium mb-1">{att.zoneName}</div>
+                      <h3 className="font-bold text-xl text-white group-hover:text-cyan-200 transition">{att.name}</h3>
                       <p className="text-slate-400 text-xs mt-2 line-clamp-3 leading-relaxed">{att.description}</p>
                     </div>
                     <div className="flex flex-wrap gap-1.5 pt-2">
                       {att.tags.map((t, idx) => (
-                        <span key={idx} className="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded-md border border-slate-700">
+                        <span key={idx} className="bg-violet-950/50 text-slate-300 text-[10px] px-2 py-0.5 rounded-md border border-violet-800/40">
                           #{t}
                         </span>
                       ))}
@@ -854,8 +854,8 @@ export default function App() {
         {/* ==================== SHOWS & ENTERTAINMENT ==================== */}
         {activeTab === 'shows' && (
           <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
-            <div className="border-b border-slate-800 pb-6">
-              <h1 className="text-3xl font-serif font-bold text-amber-200">
+            <div className="border-b border-violet-900/30 pb-6">
+              <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-violet-200 to-cyan-200 bg-clip-text text-transparent">
                 娛樂表演與巡遊時間表
               </h1>
               <p className="text-slate-400 text-sm mt-1">
@@ -865,18 +865,18 @@ export default function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {ATTRACTIONS_DATA.filter(a => a.category === 'shows').map(show => (
-                <div key={show.id} className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row">
+                <div key={show.id} className="bg-[#0C1220] border border-violet-500/15 rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row hover:border-cyan-400/30 transition-all duration-300">
                   <img src={show.image} alt={show.name} className="w-full md:w-1/2 h-56 md:h-auto object-cover" />
                   <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                     <div>
-                      <span className="inline-block bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs px-2.5 py-1 rounded-full font-bold mb-2">
+                      <span className="inline-block bg-fuchsia-500/15 text-fuchsia-300 border border-fuchsia-500/30 text-xs px-2.5 py-1 rounded-full font-bold mb-2">
                         {show.zoneName}
                       </span>
                       <h3 className="text-xl font-bold text-white">{show.name}</h3>
                       <p className="text-slate-400 text-xs mt-2 leading-relaxed">{show.description}</p>
                     </div>
-                    <div className="space-y-2 pt-3 border-t border-slate-800 text-xs text-slate-300">
-                      <div className="flex items-center gap-2 text-amber-400 font-bold">
+                    <div className="space-y-2 pt-3 border-t border-violet-900/40 text-xs text-slate-300">
+                      <div className="flex items-center gap-2 text-cyan-300 font-bold">
                         <Clock className="w-4 h-4" /> 演出時間：{show.hours}
                       </div>
                     </div>
@@ -887,17 +887,18 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== LOGOS SMOKE ONSEN HOTEL (住宿) ==================== */}
+        {/* ==================== LOGOS SMOKE ONSEN HOTEL ==================== */}
         {activeTab === 'hotel' && (
           <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
-            <div className="relative rounded-3xl overflow-hidden bg-slate-900 h-80 flex items-center justify-center p-8 border border-slate-800">
+            <div className="relative rounded-3xl overflow-hidden bg-[#0C1220] h-80 flex items-center justify-center p-8 border border-violet-500/20">
               <img 
                 src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80" 
                 alt="邏各斯煙霧溫泉旅館" 
                 className="absolute inset-0 w-full h-full object-cover brightness-50"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-violet-950/40" />
               <div className="relative z-10 text-center space-y-3 max-w-2xl">
-                <span className="bg-amber-500/20 text-amber-300 border border-amber-400/30 px-3 py-1 rounded-full text-xs font-bold">
+                <span className="bg-cyan-500/15 text-cyan-200 border border-cyan-400/30 px-3 py-1 rounded-full text-xs font-bold">
                   相傳亞利麻女神亦流連忘返
                 </span>
                 <h1 className="text-3xl md:text-5xl font-serif font-bold text-white">
@@ -910,10 +911,10 @@ export default function App() {
             </div>
 
             {/* Onsen Builder Interactive Tool */}
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-10 space-y-6 shadow-2xl">
-              <div className="border-b border-slate-800 pb-4">
-                <h2 className="text-2xl font-serif font-bold text-amber-200 flex items-center gap-2">
-                  <Sparkles className="w-6 h-6 text-amber-400" />
+            <div className="bg-[#0C1220] border border-violet-500/15 rounded-3xl p-6 md:p-10 space-y-6 shadow-2xl">
+              <div className="border-b border-violet-900/30 pb-4">
+                <h2 className="text-2xl font-serif font-bold text-violet-100 flex items-center gap-2">
+                  <Sparkles className="w-6 h-6 text-cyan-400" />
                   自選溫泉煙霧配方
                 </h2>
                 <p className="text-slate-400 text-xs mt-1">
@@ -923,26 +924,26 @@ export default function App() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
-                  { name: '智商提升', desc: '失眠鎮珍奇之最「梁子力獸」眼淚提煉靈丹', color: 'border-blue-500/40 bg-blue-950/30' },
-                  { name: '跳唱進步神速', desc: '失眠鎮氣溫最低地區搜集的「天山鍾雪蓮」', color: 'border-purple-500/40 bg-purple-950/30' },
-                  { name: '美白護膚', desc: '最清澈山水蒸餾出來的「靈魂之水」白色煙霧', color: 'border-emerald-500/40 bg-emerald-950/30' },
-                  { name: '忘記煩惱', desc: '士多啤梨冬甩蒸發出的香噴噴粉紅色煙霧', color: 'border-pink-500/40 bg-pink-950/30' }
+                  { name: '智商提升', desc: '失眠鎮珍奇之最「梁子力獸」眼淚提煉靈丹', color: 'border-cyan-500/30 bg-cyan-950/20' },
+                  { name: '跳唱進步神速', desc: '失眠鎮氣溫最低地區搜集的「天山鍾雪蓮」', color: 'border-violet-500/30 bg-violet-950/20' },
+                  { name: '美白護膚', desc: '最清澈山水蒸餾出來的「靈魂之水」白色煙霧', color: 'border-emerald-500/30 bg-emerald-950/20' },
+                  { name: '忘記煩惱', desc: '士多啤梨冬甩蒸發出的香噴噴粉紅色煙霧', color: 'border-fuchsia-500/30 bg-fuchsia-950/20' }
                 ].map(onsen => {
                   const isSelected = selectedOnsen.includes(onsen.name);
                   return (
                     <div 
                       key={onsen.name}
                       onClick={() => toggleOnsen(onsen.name)}
-                      className={`p-5 rounded-2xl border cursor-pointer transition flex flex-col justify-between space-y-3 ${onsen.color} ${isSelected ? 'ring-2 ring-amber-400 border-amber-400' : 'opacity-80 hover:opacity-100'}`}
+                      className={`p-5 rounded-2xl border cursor-pointer transition flex flex-col justify-between space-y-3 ${onsen.color} ${isSelected ? 'ring-2 ring-cyan-400 border-cyan-400/60' : 'opacity-80 hover:opacity-100'}`}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-2">
                           <h3 className="font-bold text-white text-base">{onsen.name}</h3>
-                          {isSelected && <Check className="w-4 h-4 text-amber-400" />}
+                          {isSelected && <Check className="w-4 h-4 text-cyan-400" />}
                         </div>
                         <p className="text-slate-300 text-xs leading-relaxed">{onsen.desc}</p>
                       </div>
-                      <div className="text-[11px] text-amber-400 font-medium">
+                      <div className="text-[11px] text-cyan-300 font-medium">
                         {isSelected ? '✓ 已加入溫泉配方' : '+ 點擊選購'}
                       </div>
                     </div>
@@ -950,13 +951,13 @@ export default function App() {
                 })}
               </div>
 
-              <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 flex items-center justify-between text-xs text-slate-300">
+              <div className="bg-[#070B14] p-4 rounded-2xl border border-violet-900/40 flex items-center justify-between text-xs text-slate-300">
                 <div>
-                  已選配方：<span className="text-amber-300 font-bold">{selectedOnsen.join(' + ') || '無'}</span>
+                  已選配方：<span className="text-cyan-200 font-bold">{selectedOnsen.join(' + ') || '無'}</span>
                 </div>
                 <button 
                   onClick={() => alert(`已為閣下預約「邏各斯煙霧溫泉」！含 ${selectedOnsen.join(', ')} 特別調配。`)}
-                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2 rounded-xl transition"
+                  className="bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white font-bold px-5 py-2 rounded-xl transition"
                 >
                   立即預訂溫泉套房 (生日月8折)
                 </button>
@@ -969,7 +970,7 @@ export default function App() {
         {activeTab === 'tickets' && (
           <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
             <div className="text-center space-y-2">
-              <h1 className="text-3xl font-serif font-bold text-amber-200">
+              <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-violet-200 to-cyan-200 bg-clip-text text-transparent">
                 失眠夜遊樂園 門票與會員預訂
               </h1>
               <p className="text-slate-400 text-sm">
@@ -977,35 +978,35 @@ export default function App() {
               </p>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl">
+            <div className="bg-[#0C1220] border border-violet-500/15 rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl">
               {/* Ticket selector rows */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-slate-950 rounded-2xl border border-slate-800">
+                <div className="flex items-center justify-between p-4 bg-[#070B14] rounded-2xl border border-violet-900/30">
                   <div>
                     <h3 className="font-bold text-white text-base">成人標準門票 (12歲或以上)</h3>
                     <p className="text-slate-400 text-xs">單日無限次暢玩所有機動遊戲及展覽</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className="text-amber-400 font-bold text-lg">$90.3</span>
-                    <div className="flex items-center gap-2 bg-slate-900 rounded-lg p-1 border border-slate-700">
-                      <button onClick={() => setTicketAdult(Math.max(0, ticketAdult - 1))} className="w-7 h-7 bg-slate-800 rounded text-white font-bold">-</button>
+                    <span className="text-cyan-300 font-bold text-lg">$90.3</span>
+                    <div className="flex items-center gap-2 bg-[#0C1220] rounded-lg p-1 border border-violet-900/40">
+                      <button onClick={() => setTicketAdult(Math.max(0, ticketAdult - 1))} className="w-7 h-7 bg-violet-950/60 rounded text-white font-bold hover:bg-violet-800/60">-</button>
                       <span className="w-6 text-center text-sm font-bold">{ticketAdult}</span>
-                      <button onClick={() => setTicketAdult(ticketAdult + 1)} className="w-7 h-7 bg-slate-800 rounded text-white font-bold">+</button>
+                      <button onClick={() => setTicketAdult(ticketAdult + 1)} className="w-7 h-7 bg-violet-950/60 rounded text-white font-bold hover:bg-violet-800/60">+</button>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between p-4 bg-slate-950 rounded-2xl border border-slate-800">
+                <div className="flex items-center justify-between p-4 bg-[#070B14] rounded-2xl border border-violet-900/30">
                   <div>
                     <h3 className="font-bold text-white text-base">兒童門票 (12歲以下)</h3>
                     <p className="text-slate-400 text-xs">特別特權價 $903 (尊貴特別版門票)</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className="text-amber-400 font-bold text-lg">$903.0</span>
-                    <div className="flex items-center gap-2 bg-slate-900 rounded-lg p-1 border border-slate-700">
-                      <button onClick={() => setTicketChild(Math.max(0, ticketChild - 1))} className="w-7 h-7 bg-slate-800 rounded text-white font-bold">-</button>
+                    <span className="text-cyan-300 font-bold text-lg">$903.0</span>
+                    <div className="flex items-center gap-2 bg-[#0C1220] rounded-lg p-1 border border-violet-900/40">
+                      <button onClick={() => setTicketChild(Math.max(0, ticketChild - 1))} className="w-7 h-7 bg-violet-950/60 rounded text-white font-bold hover:bg-violet-800/60">-</button>
                       <span className="w-6 text-center text-sm font-bold">{ticketChild}</span>
-                      <button onClick={() => setTicketChild(ticketChild + 1)} className="w-7 h-7 bg-slate-800 rounded text-white font-bold">+</button>
+                      <button onClick={() => setTicketChild(ticketChild + 1)} className="w-7 h-7 bg-violet-950/60 rounded text-white font-bold hover:bg-violet-800/60">+</button>
                     </div>
                   </div>
                 </div>
@@ -1013,14 +1014,14 @@ export default function App() {
 
               {/* Special Discounts */}
               <div className="space-y-3 pt-2">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400">專屬身分折扣優惠</h4>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-violet-300">專屬身分折扣優惠</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-                  <label className="flex items-center gap-3 p-3 bg-slate-950 rounded-xl border border-slate-800 cursor-pointer">
+                  <label className="flex items-center gap-3 p-3 bg-[#070B14] rounded-xl border border-violet-900/30 cursor-pointer hover:border-cyan-500/30 transition">
                     <input 
                       type="checkbox" 
                       checked={isStudentDiscount} 
                       onChange={(e) => setIsStudentDiscount(e.target.checked)}
-                      className="w-4 h-4 accent-amber-500 rounded" 
+                      className="w-4 h-4 accent-cyan-400 rounded" 
                     />
                     <div>
                       <div className="font-bold text-white">聖邏各斯中學 8折優惠</div>
@@ -1028,32 +1029,32 @@ export default function App() {
                     </div>
                   </label>
 
-                  <label className="flex items-center gap-3 p-3 bg-slate-950 rounded-xl border border-slate-800 cursor-pointer">
+                  <label className="flex items-center gap-3 p-3 bg-[#070B14] rounded-xl border border-violet-900/30 cursor-pointer hover:border-cyan-500/30 transition">
                     <input 
                       type="checkbox" 
                       checked={isFanClub} 
                       onChange={(e) => setIsFanClub(e.target.checked)}
-                      className="w-4 h-4 accent-amber-500 rounded" 
+                      className="w-4 h-4 accent-cyan-400 rounded" 
                     />
                     <div>
                       <div className="font-bold text-white">Superstar 張sir 寬寬後援會</div>
-                      <div className="text-amber-400 text-[11px]">免費入場（入寬仔數）+ VIP搖滾區</div>
+                      <div className="text-cyan-300 text-[11px]">免費入場（入寬仔數）+ VIP搖滾區</div>
                     </div>
                   </label>
                 </div>
               </div>
 
               {/* Total Calculation & Checkout */}
-              <div className="pt-6 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-6 border-t border-violet-900/30 flex items-center justify-between">
                 <div>
                   <span className="text-xs text-slate-400 block">應付總金額：</span>
-                  <span className="text-3xl font-black text-amber-300 font-serif">
+                  <span className="text-3xl font-black text-cyan-200 font-serif">
                     HK${ticketTotal}
                   </span>
                 </div>
                 <button 
                   onClick={() => alert(`成功預訂門票！應付金額: HK$${ticketTotal}。歡迎入場！`)}
-                  className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-8 py-3.5 rounded-full shadow-xl transition transform hover:scale-105"
+                  className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 hover:from-violet-400 hover:via-fuchsia-400 hover:to-cyan-400 text-white font-bold px-8 py-3.5 rounded-full shadow-xl shadow-violet-500/20 transition transform hover:scale-105"
                 >
                   確認並完成預訂
                 </button>
@@ -1061,9 +1062,9 @@ export default function App() {
             </div>
 
             {/* Annual Pass info */}
-            <div className="bg-slate-900 border border-amber-500/30 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="bg-[#0C1220] border border-cyan-500/25 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="space-y-2">
-                <span className="bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-full font-bold">全年會籍禮遇</span>
+                <span className="bg-cyan-500/15 text-cyan-200 text-xs px-2.5 py-1 rounded-full font-bold">全年會籍禮遇</span>
                 <h3 className="text-xl font-bold text-white">入境事務處會籍 · 一年只需 $360</h3>
                 <p className="text-slate-300 text-xs leading-relaxed">
                   平均每日低過 $1！全年無限次入園、免費泊車、每年免費張日寬VIP搖滾區、每月與 Peggy 會面及生日尊享禮品。
@@ -1071,7 +1072,7 @@ export default function App() {
               </div>
               <button 
                 onClick={() => alert('請親臨樂園入境事務大樓辦理會籍！')}
-                className="bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40 font-bold px-6 py-2.5 rounded-full text-xs whitespace-nowrap"
+                className="bg-violet-950/60 hover:bg-violet-900/60 text-cyan-200 border border-cyan-500/30 font-bold px-6 py-2.5 rounded-full text-xs whitespace-nowrap transition"
               >
                 辦理入會手續
               </button>
@@ -1082,8 +1083,8 @@ export default function App() {
         {/* ==================== PARK RULES & SERVICES ==================== */}
         {activeTab === 'rules' && (
           <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
-            <div className="border-b border-slate-800 pb-4">
-              <h1 className="text-3xl font-serif font-bold text-amber-200">
+            <div className="border-b border-violet-900/30 pb-4">
+              <h1 className="text-3xl font-serif font-bold bg-gradient-to-r from-violet-200 to-cyan-200 bg-clip-text text-transparent">
                 樂園守則與遊牧人服務
               </h1>
               <p className="text-slate-400 text-sm mt-1">
@@ -1094,14 +1095,14 @@ export default function App() {
             {/* Rules Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: '紫沙與石頭管制', content: '紫沙為管制物品，嚴禁觸碰或攜離園區。為確保閣下人身安全，請勿執拾任何石頭。', icon: ShieldAlert, color: 'text-amber-400' },
-                { title: '禮貌對待演藝人員', content: '嚴禁對演藝人員（主要是 Peggy）作出批評、嘲笑、侵犯界線等無禮行徑。', icon: Heart, color: 'text-pink-400' },
-                { title: '青燈大人巡邏與閃光燈', content: '青燈大人每日不定時於陰間巡邏，如遊牧人被目擊使用電話、相機閃光燈等發光裝置，將即時判入陰間監獄十分鐘。', icon: Moon, color: 'text-indigo-400' },
+                { title: '紫沙與石頭管制', content: '紫沙為管制物品，嚴禁觸碰或攜離園區。為確保閣下人身安全，請勿執拾任何石頭。', icon: ShieldAlert, color: 'text-cyan-400' },
+                { title: '禮貌對待演藝人員', content: '嚴禁對演藝人員（主要是 Peggy）作出批評、嘲笑、侵犯界線等無禮行徑。', icon: Heart, color: 'text-fuchsia-400' },
+                { title: '青燈大人巡邏與閃光燈', content: '青燈大人每日不定時於陰間巡邏，如遊牧人被目擊使用電話、相機閃光燈等發光裝置，將即時判入陰間監獄十分鐘。', icon: Moon, color: 'text-violet-400' },
                 { title: 'DIDISAN 緊急呼救', content: '如遇上危險，請原地大叫「DIDISAN!!!」，執法人員將立即到場支援。', icon: PhoneCall, color: 'text-rose-400' }
               ].map((rule, idx) => {
                 const IconComponent = rule.icon;
                 return (
-                  <div key={idx} className="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-2">
+                  <div key={idx} className="bg-[#0C1220] p-5 rounded-2xl border border-violet-500/15 space-y-2 hover:border-cyan-400/30 transition">
                     <div className="flex items-center gap-2">
                       <IconComponent className={`w-5 h-5 ${rule.color}`} />
                       <h3 className="font-bold text-white text-base">{rule.title}</h3>
@@ -1113,17 +1114,17 @@ export default function App() {
             </div>
 
             {/* Transport Info */}
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-3xl space-y-4">
-              <h2 className="text-xl font-bold text-amber-200 flex items-center gap-2 font-serif">
-                <Bus className="w-5 h-5 text-amber-400" /> 園內交通網絡
+            <div className="bg-[#0C1220] border border-violet-500/15 p-6 rounded-3xl space-y-4">
+              <h2 className="text-xl font-bold text-violet-100 flex items-center gap-2 font-serif">
+                <Bus className="w-5 h-5 text-cyan-400" /> 園內交通網絡
               </h2>
               <div className="space-y-3 text-xs text-slate-300">
-                <div className="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                  <span className="font-bold text-amber-400 text-sm block mb-1">邏各斯飄飄鐵路 / 陰間列車</span>
+                <div className="bg-[#070B14] p-4 rounded-xl border border-violet-900/30">
+                  <span className="font-bold text-cyan-300 text-sm block mb-1">邏各斯飄飄鐵路 / 陰間列車</span>
                   途經：市鎮大街站 ➔ 六度圈之城站 ➔ 歌瑪園站（只限落客） ➔ 陰間部落站 ➔ 山海閣及邏各斯站（循環線，每逢00, 20, 40分發車，全程約40分鐘）。
                 </div>
-                <div className="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                  <span className="font-bold text-amber-400 text-sm block mb-1">邏各斯觀光車</span>
+                <div className="bg-[#070B14] p-4 rounded-xl border border-violet-900/30">
+                  <span className="font-bold text-cyan-300 text-sm block mb-1">邏各斯觀光車</span>
                   每日兩班，不設中途站。20:00 從霹靂啪嘞監獄開出，途經跳彈床日報報館及凹凸凹凸廣場，終點為枕頭樹汁店（20:30原路回程）。
                 </div>
               </div>
@@ -1133,14 +1134,14 @@ export default function App() {
 
       </main>
 
-      {/* 3. ATTRACTION DETAIL MODAL (Matching HKDL Screenshot 1: 灰姑娘旋轉木馬 UI) */}
+      {/* 3. ATTRACTION DETAIL MODAL */}
       {selectedAttraction && (
-        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 z-50 bg-[#070B14]/85 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-[#0C1220] border border-violet-500/25 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in fade-in zoom-in duration-200">
             {/* Close Button */}
             <button 
               onClick={() => setSelectedAttraction(null)}
-              className="absolute top-4 right-4 z-10 bg-slate-950/80 hover:bg-slate-800 text-white p-2 rounded-full border border-slate-700 transition"
+              className="absolute top-4 right-4 z-10 bg-[#070B14]/90 hover:bg-violet-950/80 text-white p-2 rounded-full border border-violet-500/30 transition"
             >
               <X className="w-5 h-5" />
             </button>
@@ -1152,9 +1153,9 @@ export default function App() {
                 alt={selectedAttraction.name} 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C1220] via-transparent to-transparent" />
               <div className="absolute bottom-4 left-6">
-                <span className="bg-amber-500 text-slate-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                   {selectedAttraction.categoryName} · {selectedAttraction.zoneName}
                 </span>
                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mt-1">
@@ -1163,37 +1164,37 @@ export default function App() {
               </div>
             </div>
 
-            {/* Modal Body Content (Identical to HKDL attraction info snippet) */}
+            {/* Modal Body Content */}
             <div className="p-6 md:p-8 space-y-6 text-sm">
-              <div className="flex flex-wrap items-center gap-6 text-xs text-slate-300 bg-slate-950 p-4 rounded-2xl border border-slate-800">
+              <div className="flex flex-wrap items-center gap-6 text-xs text-slate-300 bg-[#070B14] p-4 rounded-2xl border border-violet-900/30">
                 <div>
                   <span className="text-slate-500 block">身高要求</span>
-                  <span className="font-bold text-amber-300">{selectedAttraction.height}</span>
+                  <span className="font-bold text-cyan-300">{selectedAttraction.height}</span>
                 </div>
-                <div className="w-px h-8 bg-slate-800" />
+                <div className="w-px h-8 bg-violet-900/40" />
                 <div>
                   <span className="text-slate-500 block">今日營運時間</span>
-                  <span className="font-bold text-amber-300">{selectedAttraction.hours}</span>
+                  <span className="font-bold text-cyan-300">{selectedAttraction.hours}</span>
                 </div>
-                <div className="w-px h-8 bg-slate-800" />
+                <div className="w-px h-8 bg-violet-900/40" />
                 <div>
                   <span className="text-slate-500 block">位置</span>
-                  <span className="font-bold text-amber-300">{selectedAttraction.zoneName}</span>
+                  <span className="font-bold text-cyan-300">{selectedAttraction.zoneName}</span>
                 </div>
               </div>
 
               <div className="space-y-3 leading-relaxed text-slate-300">
-                <h3 className="font-serif font-bold text-lg text-amber-200">景點介紹</h3>
+                <h3 className="font-serif font-bold text-lg text-violet-200">景點介紹</h3>
                 <p className="whitespace-pre-line text-sm">{selectedAttraction.description}</p>
               </div>
 
-              <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-4 border-t border-violet-900/30 flex items-center justify-between">
                 <button 
                   onClick={() => {
                     alert(`已將「${selectedAttraction.name}」加入你的樂園一日遊行程！`);
                     setSelectedAttraction(null);
                   }}
-                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-2.5 rounded-full text-xs transition shadow-lg"
+                  className="bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white font-bold px-6 py-2.5 rounded-full text-xs transition shadow-lg"
                 >
                   + 加入我的行程
                 </button>
@@ -1210,19 +1211,19 @@ export default function App() {
       )}
 
       {/* 4. FOOTER */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4 text-xs text-slate-500">
+      <footer className="bg-[#050810] border-t border-violet-900/30 py-12 px-4 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto space-y-6 text-center">
-          <div className="flex items-center justify-center gap-2 text-amber-400 font-serif text-lg font-bold">
+          <div className="flex items-center justify-center gap-2 text-cyan-300 font-serif text-lg font-bold">
             <Sparkles className="w-5 h-5" /> 失眠夜遊樂園 Philosomnia Park
           </div>
           <p className="max-w-xl mx-auto">
             © 邏各斯大娛樂家初代反斗俠版權所有 · 「喺世界最需要娛樂嘅時候，我就會出場！」
           </p>
           <div className="flex justify-center space-x-6 text-slate-400">
-            <button onClick={() => setActiveTab('rules')} className="hover:text-amber-400">使用條款</button>
-            <button onClick={() => setActiveTab('rules')} className="hover:text-amber-400">私隱政策</button>
-            <button onClick={() => setActiveTab('tickets')} className="hover:text-amber-400">門票條款</button>
-            <button onClick={() => setActiveTab('hotel')} className="hover:text-amber-400">煙霧溫泉指南</button>
+            <button onClick={() => setActiveTab('rules')} className="hover:text-cyan-300 transition">使用條款</button>
+            <button onClick={() => setActiveTab('rules')} className="hover:text-cyan-300 transition">私隱政策</button>
+            <button onClick={() => setActiveTab('tickets')} className="hover:text-cyan-300 transition">門票條款</button>
+            <button onClick={() => setActiveTab('hotel')} className="hover:text-cyan-300 transition">煙霧溫泉指南</button>
           </div>
         </div>
       </footer>
